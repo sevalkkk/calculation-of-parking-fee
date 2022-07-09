@@ -1,0 +1,147 @@
+% ---------------------------------------------------------------- %
+%                     LATEX Tez Sablonu		                   %
+%                                                                  %
+%		         Surum 1.5.1                               %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% ---------------------------------------------------------------- %
+% documentclass kullanim argumanlari: 				   %
+% [onluarkali,tekyonlu],[turkce,ingilizce],[yukseklisans,doktora], %
+% [bez,karton],[bilisim,fenbilimleri,sosyalbilimler,avrasya,enerji]%
+% Ornek kullanim: \documentclass[onluarkali,ingilizce,yukseklisans,%
+% karton,fenbilimleri]{tezSablon}					   %
+% Baska Ornek kullanim: \documentclass[tekyonlu,ingilizce,	   %
+% yukseklisans,bez,bilisim]{tezSablon}			           %
+% ---------------------------------------------------------------- %
+\documentclass[onluarkali,turkce,yukseklisans,karton,""]{tezSablon}
+% ---------------------------------------------------------------- %
+% Komutlarda buyuk ve kucuk harf ayrimina ozen gostermek           %
+% gereklidir. Ornegin argumanin {\"O\u{g}\-ren\-ci Ad{\i}}{SOYADI} %
+% yapisinda olmasi demek, adlarda ilk harflerin buyuk ve           %
+% digerlerinin kucuk, soyadinda ise butun harflerin buyuk olmasi   %
+% gerektigi anlamina gelmektedir.				   %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% Sadece Ad SOYAD yazilmalidir. Unvan yazilmamalidir.              %
+% ---------------------------------------------------------------- %
+\yazar{Seval Naz}{KARAHAN} 
+\ogrencino{17253510}
+
+% ---------------------------------------------------------------- %
+% Kullanmayacaginiz yapilarin ayirac aralarini bos birakiniz.      %
+% Ornek: \unvan{}                                                  %
+% ---------------------------------------------------------------- %
+\unvan{}
+ 
+% ---------------------------------------------------------------- %
+% Asagidaki yapilarda birinci oge Turkce, ikinci oge Ingilizce     %
+% yapiyi olusturmak icindir.	                                   %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% Sozcuklerin ilk harfleri buyuk, diger harfler kucuk yazilacak.   %
+% ---------------------------------------------------------------- %
+\anabilimdali{Bilgisayar M\"uhendisli\u{g}i}{Department of Computer Engineering}
+
+
+% ---------------------------------------------------------------- %
+% Beyaz cilt hazirlarken bolume verildigi tarih esas alinir.       %
+% Bez (mavi-siyah) ciltte ise tezin savunuldugu tarih ay yil 	   %
+% olarak yazilir. 						   %
+% ---------------------------------------------------------------- %
+\tarih{HAZİRAN 2022}{JUNE 2022}
+\tarihKucuk{Haziran 2022}{June 2022}
+
+% ---------------------------------------------------------------- %
+% Danisman, baslik ve tez tarihi bilgileri icin asagidaki yapi     %
+% kullanilmaktadir.						   %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% Danisman bilgisi, beyaz kapakli tezde ilk sayfada var. Bez       %
+% (mavi-siyah) ciltte yok. Neden? Cunku ic kapakta gececek.        %						
+% ---------------------------------------------------------------- %
+\tezyoneticisi{Doç. Dr.Öğr.Üyesi Tufan Turacı}   
+
+\baslik{OTOPARKLARDA }{PLAKA TANIMA SİSTEMİ İLE }{PARK ÜCRETİ HESABI}
+
+
+
+\title{CALCULATION OF PARKING FEE }{WİTH PLATE RECOGNITION SYSTEM}{IN PARKING AREAS }
+
+% ---------------------------------------------------------------- %
+% Bu tarih beyaz kapakli ilk tezin bolume verildigi tarihtir.      %
+% ---------------------------------------------------------------- %
+\tezvermetarih{13 HAZİRAN 2022}{JUNE 2022} 
+
+\tezsavunmatarih{31 MAYIS 2022} {MAY 2021}
+
+% ---------------------------------------------------------------- %
+% Esdanisman ve juri bilgileri asagidadir. Kullanmayacaginiz satiri%
+% tumuyle silmeyiniz. Argumanini bos birakiniz.                    %
+% Ornek: \esdanismani{}{} 					   %
+% ---------------------------------------------------------------- %
+  
+
+\juriBir{Prof. Dr. Serdar {}İPLİKÇİ}{Pamukkale \"Universitesi}
+
+\juriIki{Öğr. Gör. Dr. Gökhan {}UÇKAN}{Pamukkale \"Universitesi}
+
+\juriUc{Yük. Müh. Vasfi {}TATAROĞLU}{Pamukkale \"Universitesi}
+
+
+
+\input defs.tex                                        
+
+% ---------------------------------------------------------------- %
+% Ithaf sayfasinda bulunacak tumceler icin kullanilabilecek        %
+% yapi asagidadir. Ithaf sayfasi bulunmayacaksa argumani(ayiraclar %
+% arasini) bos birakiniz.					   %
+% ------------------------------------------- --------------------- %
+%\ithaf{E\c{s}ime ve \c{c}ocuklar\i ma,}
+
+% ---------------------------------------------------------------- %
+% Asagida belirtilen tex uzantili dosyalarin icerigi		   %
+% olusturulmalidir.						   %
+% ---------------------------------------------------------------- %
+\onsoz{\input onsoz.tex}             
+\kisaltmalistesi{\input kisaltmalar.tex}
+\ozet{\input ozet.tex}               
+\summary{\input summary.tex}  
+
+
+\begin{document} 
+\input ch1.tex                              
+\input ch2.tex
+\input ch3.tex
+
+% ---------------------------------------------------------------- %
+% Bibtex veritabani biceminde olmasi gereken tez.bib dosyasina     %
+% tezin referanslari yerlestirilmeli, bu referanslara, tez         %
+% icerisinde \cite komutu ile basvuru yapilmalidir.                %
+% ---------------------------------------------------------------- %
+\bibliographystyle{tezbib}        
+\bibliography{tez}
+% ---------------------------------------------------------------- %
+% Ekler icin asagida belirtilen tex uzantili dosyalar 		   %
+% olusturulmali, eger ek kullanilmayacaksa, karsilik gelen         %
+% satirlar silinmelidir.                                           %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% Ek icin bolum ayari. \eklerbolum{x} x bolumlu olusturur. Bu olgu,% 
+% tablo ve sekillerin adreslenmesinde bu baglamda kullanilir. A    %
+% ile baslamak icin \eklerbolum{0} yazilmalidir.                   %
+% ---------------------------------------------------------------- %
+
+
+% ---------------------------------------------------------------- %
+% Ozgecmis ile ilgili dosya adi asagida belirtilmistir.            %
+% ---------------------------------------------------------------- %
+\ozgecmis{\input ozgecmis.tex}
+
+\end{document}                      
+
+

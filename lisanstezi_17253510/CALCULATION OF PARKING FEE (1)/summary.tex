@@ -1,0 +1,10 @@
+In this project, vehicle entry-exit information and locations are kept in memory, depending on the license plates of the vehicles, using image processing libraries. The parking fee is calculated according to which plate of the vehicle is parked in which part of the parking lot and entry and exit times.
+So how do I aim to keep these plates in memory? \\
+First of all, every vehicle has a license plate. License plate recognition is performed with the help of Python image processing libraries. The locations of each vehicle in the parking lot are matched with their license plates and stored in the SQLITE database. Likewise, the entrance time of the vehicle whose license plate is defined to the parking lot is also kept in the records in our database.
+After the license plate is defined, the user is asked to enter a location in the parking lot. If a vehicle already exists at this location, a message is sent to select another location for the vehicle as a feedback. \\
+After the correct location information is entered, the exact time and minutes of our vehicle's entrance to the parking lot are recorded in the database according to the computer. \\
+Later, if the same plate is wanted to be read a second time, this means that this vehicle is already registered in the database, that is, it is present in the parking lot, and now the parking lot must be done.\\
+In this part, the exact exit hour and minute are calculated according to the computer, and accordingly the entry time is subtracted. Our remaining hours are multiplied by the fee and return as the parking fee that the user has to pay. \\
+If our vehicle has left the parking lot, its registration should also be deleted from the database. \\
+
+\textbf{Keywords:} Python,Image Processing,Image Restoration,High Definition, Character recognition

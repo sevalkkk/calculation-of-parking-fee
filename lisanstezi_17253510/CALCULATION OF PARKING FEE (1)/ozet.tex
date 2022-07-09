@@ -1,0 +1,10 @@
+Bu projede araç giriş-çıkış bilgileri ve konumları görüntü işleme kütüphaneleri kullanılarak araçların plakalarına bağlı olarak hafızada tutulmaktadır. Otopark ücreti, aracın hangi plakasının otoparkın hangi bölümüne park edildiğine ve giriş çıkış saatlerine göre hesaplanır.
+Peki bu plakaları nasıl hafızada tutmayı hedefliyorum? \\
+Öncelikle her aracın bir plakası vardır. Plaka tanıma, Python görüntü işleme kitaplıkları yardımıyla gerçekleştirilir. Otoparktaki her aracın konumu plakaları ile eşleştirilir ve SQLITE veri tabanında saklanır. Aynı şekilde plakası tanımlanan aracın otoparka giriş saati de veritabanımızdaki kayıtlarda tutulmaktadır.
+Plaka tanımlandıktan sonra kullanıcıdan otoparkta bir konum girmesi istenir. Bu konumda zaten bir araç varsa, geri bildirim olarak araç için başka bir konum seçilmesi için bir mesaj gönderilir. \\
+Doğru konum bilgisi girildikten sonra aracımızın otoparka girişinin tam saati ve dakikası bilgisayara göre veri tabanına kaydedilir. \\
+Daha sonra aynı plaka ikinci kez okunmak isteniyorsa bu araç zaten veri tabanında kayıtlı yani otoparkta mevcut ve artık otopark yapılması gerekiyor.\\
+Bu kısımda bilgisayara göre kesin çıkış saati ve dakikası hesaplanır ve buna göre giriş zamanı çıkarılır. Kalan saatlerimiz ücret ile çarpılır ve kullanıcının ödemesi gereken park ücreti olarak geri döner. \\
+Aracımız otoparktan ayrıldıysa kaydı da veri tabanından silinmelidir. \\
+
+\textbf{Anahtar Sözcükler:} Python,Görüntü İşleme,Görüntü Restorasyonu,Yüksek Çözünürlük, Karakter tanıma
